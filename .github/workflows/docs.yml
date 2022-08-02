@@ -95,6 +95,9 @@ jobs:
           path: /**/_autosummary/*.rst
           key: autosummary-rst-${{ hashFiles('pyvista/_version.py') }}
 
+      - name: LinkCheck
+        run: make -C doc linkcheck SPHINXOPTS="-W --keep-going --color"
+
       - name: Build Documentation
         run: make -C doc html SPHINXOPTS="-W --keep-going"
 
