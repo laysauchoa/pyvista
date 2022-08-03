@@ -242,6 +242,12 @@ intersphinx_timeout = 10
 linkcheck_retries = 3
 linkcheck_timeout = 500
 
+
+# Pages are not detected correct by ``make linkcheck``
+linkcheck_ignore = [
+    'https://data.kitware.com/#collection/55f17f758d777f6ddc7895b7/folder/5afd932e8d777f15ebe1b183'
+]
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
 
