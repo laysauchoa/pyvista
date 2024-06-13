@@ -1,0 +1,10 @@
+name: Linkcheck failed
+description: Report broken links in the docs
+labels: ["maintenance", "bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Linkcheck runs weekly and it may have found broken links in the last run. 
+
+        You can check the [last workflow run](https://github.com/pyvista/pyvista/actions/workflows/linkcheck.yml) on {{ date | date('dddd, MMM Do YYYY, hh:mm A') }} (UTC) to find the broken links and fix it.

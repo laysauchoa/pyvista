@@ -8,7 +8,6 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
-
 jobs:
   doc:
     name: Check Links
@@ -42,3 +41,11 @@ jobs:
 
       - name: LinkCheck
         run: make -C doc linkcheck SPHINXOPTS="-W --keep-going --color"
+
+      - name: Create Issue
+        if: failure()
+        uses: JasonEtco/create-an-issue@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          filename: .github/ISSUE_TEMPLATE/linkcheck_report.md

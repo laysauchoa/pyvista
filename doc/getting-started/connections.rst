@@ -58,7 +58,7 @@ Many More
 .. _gemgis: https://github.com/cgre-aachen/gemgis
 .. _gimli: https://github.com/gimli-org/gimli
 .. _itkwidgets: https://github.com/InsightSoftwareConsortium/itkwidgets
-.. _mne-python: https://github.com/mne-tools/mne-python
+.. _mne-python: https://github.com/we-tools/mne-python
 .. _omfvista: https://github.com/OpenGeoVis/omfvista
 .. _pyleecan: https://github.com/Eomys/pyleecan
 .. _pymapdl: https://github.com/pyansys/pymapdl
